@@ -46,4 +46,11 @@ doInit();
 //console.log(world[0]);
 //console.log(world[1]);
 
-drawIt(generation);
+setWatch(function() {
+  console.log("Pressed");
+  doInit();
+}, BTN, {edge:"rising", debounce:50, repeat:true});
+
+while(true) {
+  drawIt(generation);
+}
