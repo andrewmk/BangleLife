@@ -1,11 +1,9 @@
 var x = new Array(12);
-
 for (var i = 0; i < x.length; i++) {
   x[i] = new Array(12);
 }
 
 var y = new Array(12);
-
 for (var i = 0; i < y.length; i++) {
   y[i] = new Array(12);
 }
@@ -40,23 +38,16 @@ function doInit() {
   }
 }
 
-//console.log(world[0]);
-//console.log(world[1]);
-doInit();
-//console.log(world[0]);
-//console.log(world[1]);
-
 setWatch(function() {
-  console.log("Pressed");
   doInit();
   generation = 0;
   drawIt(generation);
 }, BTN, {edge:"rising", debounce:50, repeat:true});
 
+doInit();
+
 //while(true) {
-  console.log(generation);
   drawIt(generation);
   generation = 1 - generation;
-  console.log(generation);
   drawIt(generation);
 //}
