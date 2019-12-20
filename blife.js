@@ -54,5 +54,9 @@ doInit();
 setTimeout(function() {
         doInit();
         drawIt(0);
+  setTimeout(function() {
+        doInit();
+        drawIt(0);
+    }, 1000*1);
     }, 1000*1);
 //}
