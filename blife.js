@@ -53,4 +53,5 @@ setWatch(function() {
 
 while(true) {
   drawIt(generation);
+  generation = 1 - generation;
 }
