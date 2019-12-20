@@ -50,4 +50,9 @@ doInit();
   drawIt(generation);
   generation = 1 - generation;
   drawIt(generation);
+
+setTimeout(function() {
+        doInit();
+        drawIt(0);
+    }, 1000*1);
 //}
