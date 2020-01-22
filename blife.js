@@ -13,15 +13,18 @@ var generation = 0;
 
 function drawIt(generation) {
   var i, j;
-  g.clear();
+  //g.clear();
   for (i=10; i<240; i+=20) {
     for (j=10; j<240; j+=20) {
       cell = world[generation][(j-10)/20][(i-10)/20];
       if (cell) {
+        g.setColor(1, 1, 1);
         g.fillCircle(i, j, 5);
       }
       else {
-        g.drawCircle(i, j, 5);
+        //g.drawCircle(i, j, 5);
+        g.setColor(0, 0, 0);
+        g.fillCircle(i, j, 5);
       }
     }
   }
@@ -36,6 +39,7 @@ function doInit() {
       y[(i-10)/20][(j-10)/20] = cell;
     }
   }
+  g.clear();
 }
 
 setWatch(function() {
